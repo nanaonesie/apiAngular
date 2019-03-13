@@ -1,0 +1,30 @@
+<div mat-dialog-content>
+  <form #registration="ngForm">
+    <mat-form-field class="full-width">
+      <mat-select name="gender" placeholder="Genre" [(ngModel)]="user.cdcivil" ngModel required [disabled]="disabled">
+        <mat-option value="Mme.">Madame</mat-option>
+        <mat-option value="M.">Monsieur</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <input matInput name="firstname" [(ngModel)]="user.prenom" ngModel placeholder="Prénom" required [disabled]="disabled">
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <input matInput name="lastname" [(ngModel)]="user.nom" ngModel placeholder="Nom" required [disabled]="disabled">
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <input matInput name="email" [(ngModel)]="user.email" ngModel placeholder="E-mail" type="email" required
+        [disabled]="disabled">
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <input matInput name="candNo" [(ngModel)]="user.numecan" ngModel placeholder="Numéro du candidat" required
+        [disabled]="disabled">
+    </mat-form-field>
+  </form>
+</div>
+
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-button *ngIf="!disabled" type="submit" (click)="onSave(user)" [disabled]="!registration.valid">Save</button>
+  <button mat-button *ngIf="disabled" type="submit" (click)="onEdit(user)">Edit</button>
+</div>

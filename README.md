@@ -2,9 +2,21 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.1.
 
+##Pré-requis
+
+``` Json server installation
+npm i -g json-server
+cd path/to/nana-app
+json-server --watch src/assets/db/list_of_candidat_json.json
+```
+
+``` Install your repo
+npm install
+```
+
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` or `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 

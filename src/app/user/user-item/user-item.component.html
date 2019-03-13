@@ -1,0 +1,11 @@
+<mat-list-item>
+  <h3 class="name-user" mat-line>{{user.prenom}} {{user.nom}}</h3>
+  <h4 class="email-user" mat-line>{{user.email}}</h4>
+  <button mat-icon-button (click)="openPreview()">
+    <mat-icon>visibility</mat-icon>
+  </button>
+  <button mat-icon-button (click)="openConfirmDelete()" color="warn">
+    <mat-icon>delete</mat-icon>
+  </button>
+</mat-list-item>
+<mat-divider></mat-divider>
